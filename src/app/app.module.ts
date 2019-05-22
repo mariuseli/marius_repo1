@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 import { registerLocaleData} from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 
-registerLocaleData('localeFr', 'fr');
+registerLocaleData(localeFr, 'fr');
 
 @NgModule({
   declarations: [

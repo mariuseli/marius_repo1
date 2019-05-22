@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrestationService } from 'src/app/prestations/services/prestations.service';
 import { Prestation } from 'src/app/shared/models/prestation.model';
+import { State } from 'src/app/shared/enums/state.enum';
 
 @Component({
   selector: 'app-list-prestations',
@@ -17,6 +18,10 @@ export class ListPrestationsComponent implements OnInit {
   ngOnInit() {
     this.collection = this.prestationService.collection;
     this.enteteTableau = ['Type', 'Client', 'Durée', 'Total HT', 'Total TTC', 'State', 'Action'];
+  }
+
+  change(param: {item: Prestation, state: State}) {
+    this.prestationService.update(param.item, param.state);
   }
 
 }

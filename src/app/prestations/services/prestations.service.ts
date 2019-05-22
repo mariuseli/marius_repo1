@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { fakePrestation } from './fake-prestations';
+import { State } from 'src/app/shared/enums/state.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -23,4 +24,14 @@ export class PrestationService{
     this.pCollection = col;
   }
 
+  update(item: Prestation, state?: State){
+    const data = {...item};
+    data.state = state;
+
+    //appel HTTP vers un endpoint de base de données
+    item.state = state;
+    console.log(item);
+
+
+   }
 }
