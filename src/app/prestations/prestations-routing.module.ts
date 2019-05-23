@@ -7,7 +7,8 @@ const appRoutes: Routes = [
 
   {
     path: '',
-    component: PagePrestationsComponent
+    component: PagePrestationsComponent,
+    data: {titre: 'Prestations', libelle: 'Liste des Prestations !!'}
   }
 
 

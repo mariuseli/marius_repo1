@@ -11,7 +11,7 @@ import { State } from 'src/app/shared/enums/state.enum';
 export class ListPrestationsComponent implements OnInit {
 
   collection: Prestation[];
-  enteteTableau: Array<String>;
+  enteteTableau: Array<string>;
 
   constructor(private prestationService: PrestationService) { }
 

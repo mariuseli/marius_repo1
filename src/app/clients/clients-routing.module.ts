@@ -8,7 +8,8 @@ const appRoutes: Routes = [
 
   {
     path: '',
-    component: PageClientsComponent
+    component: PageClientsComponent,
+    data: {titre: 'Client', libelle: 'Liste des clients'}
   }
 
 

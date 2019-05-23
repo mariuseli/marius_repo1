@@ -8,7 +8,7 @@ export class TotalPipe implements PipeTransform {
 
   transform(value: Prestation, args?: any): number {
 
-    console.log(value);
+    // console.log(value);
 
     if (value) {
       if (args) {

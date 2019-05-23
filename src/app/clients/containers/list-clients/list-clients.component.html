@@ -1,0 +1,5 @@
+<app-tableau [headers] = "enteteTableauClient">
+
+  <app-item-client *ngFor="let obj of collection" [item]="obj" (doChange)="change($event)"></app-item-client>
+
+</app-tableau>

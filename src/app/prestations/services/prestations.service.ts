@@ -30,7 +30,7 @@ export class PrestationService{
 
     //appel HTTP vers un endpoint de base de données
     item.state = state;
-    console.log(item);
+    // console.log(item);
 
 
    }
