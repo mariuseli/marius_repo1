@@ -32,4 +32,8 @@ export class ClientService {
     item.state = state;
     // console.log(item);
    }
+
+   add(item: Client){
+     this.collection.push(new Client(item));
+   }
 }

@@ -13,6 +13,7 @@ export class FormClientComponent implements OnInit {
   states = StateClient;
   formulaireClient: FormGroup;
   clientInitial = new Client();
+
   @Output() fireModifClient: EventEmitter<Client> = new EventEmitter();
 
   constructor(private fb: FormBuilder) { }
@@ -23,9 +24,9 @@ export class FormClientComponent implements OnInit {
 
   createFormulaire() {
     this.formulaireClient = this.fb.group({
-      clientName: [this.clientInitial.name, Validators.required],
-      clientEmail: [this.clientInitial.email, Validators.compose([Validators.required, Validators.email])],
-      clientState: [this.clientInitial.state]
+      name: [this.clientInitial.name, Validators.required],
+      email: [this.clientInitial.email, Validators.compose([Validators.required, Validators.email])],
+      state: [this.clientInitial.state]
     });
   }
 

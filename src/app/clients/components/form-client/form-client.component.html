@@ -1,21 +1,22 @@
-<form [formGroup] = "formulaireClient" (fireModifClient) = "submitClientForm()">
+<form [formGroup] = "formulaireClient" (ngSubmit) ="submitClientForm()">
 
 
   <div class="form-group">
-    <label for="clientname">Type</label>
-    <input formControlName="clientName" type="text" class="form-control" id="clientname" >
+    <label for="clientname">Nom</label>
+    <input formControlName="name" type="text" class="form-control" id="clientname" >
   </div>
 
   <div class="form-group">
-    <label for="clientname">Type</label>
-    <input formControlName="clientEmail" type="text" class="form-control" id="clientname" >
+    <label for="clientemail">Email</label>
+    <input formControlName="email" type="text" class="form-control" id="clientemail" >
   </div>
 
   <div class="form-group">
       <label for="state">State</label>
-      <select formControlName="clientState" id="state" class="form-control">
-          <option *ngFor="let state of (states | keyvalue)" [value] = "state.state">{{state.value}}</option>
+      <select formControlName="state" id="state" class="form-control">
+          <option *ngFor="let state of (states | keyvalue)" [value] = "state.value">{{state.value}}</option>
       </select>
   </div>
 
+  <button [disabled]="formulaireClient.invalid" type="submit" class="btn btn-primary">Submit</button>
 </form>
