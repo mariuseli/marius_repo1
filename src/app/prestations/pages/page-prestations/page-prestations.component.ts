@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-page-prestations',
   templateUrl: './page-prestations.component.html',
@@ -9,12 +10,14 @@ export class PagePrestationsComponent implements OnInit {
 
   titre: string;
   libelle: string;
+  txtButton: string;
 
   constructor() { }
 
   ngOnInit() {
     // this.titre = "Prestations";
     // this.libelle = "Liste des Prestations";
+    this.txtButton = "Ajouter une prestation";
   }
 
 }

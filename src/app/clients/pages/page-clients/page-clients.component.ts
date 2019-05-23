@@ -10,9 +10,12 @@ export class PageClientsComponent implements OnInit {
 
   titre: string;
   libelle: string;
+  txtButton: string;
 
   constructor() { }
 
- ngOnInit() { }
+ ngOnInit() {
+   this.txtButton = "Ajouter un client";
+  }
 
 }

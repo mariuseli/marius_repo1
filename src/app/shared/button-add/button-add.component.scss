@@ -1,0 +1,20 @@
+@import 'theme';
+
+/********Exclusive à Angular*********/
+:host() {
+  margin: 10px;
+}
+
+:host-context(app-template-a) button {
+  background-color: $color1;
+}
+:host-context(app-template-b) button {
+  background-color: $color2;
+}
+/************************************/
+
+button{
+  // padding: .5rem .1rem;
+  color: $light-color;
+  border: none;
+}
