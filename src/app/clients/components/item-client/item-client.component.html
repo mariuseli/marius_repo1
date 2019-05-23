@@ -8,5 +8,13 @@
         [selected]="item.state === state.value">{{state.value}}</option>
     </select>
   </td>
-  <td>Action</td>
+  <td>
+
+    <app-action
+      [actions]="[{icon: faEdit, fn:'Modifier'},{icon:faTrashAlt , fn:'Supprimer'}]"
+      (doAction)="action($event)"
+    >
+    </app-action>
+
+  </td>
 </tr>

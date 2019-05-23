@@ -24,4 +24,14 @@ export class ListPrestationsComponent implements OnInit {
     this.prestationService.update(param.item, param.state);
   }
 
+  action(param:{item: Prestation, pAction: string}){
+    if(param.pAction='delete'){
+      this.prestationService.delete(param.item);
+    }
+
+    if(param.pAction='edit'){
+      console.log('redirtection vers edition');
+    }
+  }
+
 }

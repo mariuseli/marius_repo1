@@ -21,4 +21,9 @@
   tbody > * {
     display: contents;
   }
+
+  .list-group-item:hover {
+    cursor: pointer;
+    background: darken($light-color, 10);
+  }
 }

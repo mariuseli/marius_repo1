@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Client } from 'src/app/shared/models/client.model';
 
 @Component({
   selector: 'app-page-clients',
@@ -16,6 +16,10 @@ export class PageClientsComponent implements OnInit {
 
  ngOnInit() {
    this.txtButton = "Ajouter un client";
+  }
+
+  add(item: Client){
+
   }
 
 }

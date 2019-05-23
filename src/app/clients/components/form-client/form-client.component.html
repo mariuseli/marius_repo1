@@ -1,0 +1,21 @@
+<form [formGroup] = "formulaireClient" (fireModifClient) = "submitClientForm()">
+
+
+  <div class="form-group">
+    <label for="clientname">Type</label>
+    <input formControlName="clientName" type="text" class="form-control" id="clientname" >
+  </div>
+
+  <div class="form-group">
+    <label for="clientname">Type</label>
+    <input formControlName="clientEmail" type="text" class="form-control" id="clientname" >
+  </div>
+
+  <div class="form-group">
+      <label for="state">State</label>
+      <select formControlName="clientState" id="state" class="form-control">
+          <option *ngFor="let state of (states | keyvalue)" [value] = "state.state">{{state.value}}</option>
+      </select>
+  </div>
+
+</form>
