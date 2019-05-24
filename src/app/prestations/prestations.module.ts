@@ -8,10 +8,20 @@ import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
 import { AddPrestationComponent } from './containers/add-prestation/add-prestation.component';
+import { CommentPrestationComponent } from './components/comment-prestation/comment-prestation.component';
+import { DetailsPrestationComponent } from './components/details-prestation/details-prestation.component';
 
 @NgModule({
-  declarations: [ ListPrestationsComponent, ItemPrestationComponent
-    , FormPrestationComponent, PageAddPrestationComponent, PagePrestationsComponent, AddPrestationComponent],
+  declarations: [
+    ListPrestationsComponent,
+    ItemPrestationComponent,
+    FormPrestationComponent,
+    PageAddPrestationComponent,
+    PagePrestationsComponent,
+    AddPrestationComponent,
+    CommentPrestationComponent,
+    DetailsPrestationComponent
+  ],
   imports: [
     CommonModule,
     PrestationsRoutingModule,

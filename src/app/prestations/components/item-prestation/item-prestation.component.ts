@@ -17,6 +17,9 @@ export class ItemPrestationComponent implements OnInit {
   @Output() doChange: EventEmitter<any> = new EventEmitter();
   @Output() doAction: EventEmitter<any> = new EventEmitter();
 
+  //custom
+  @Output() doIdentifierLigneSelectionnee: EventEmitter<any> = new EventEmitter();
+
   states = State;
   constructor() { }
 
@@ -31,12 +34,17 @@ export class ItemPrestationComponent implements OnInit {
     });
   }
 
-  action(param){
-
-    console.log(param);
-     this.doAction.emit({
+  action(param) {
+    this.doAction.emit({
         item: this.item,
         action: param
       });
   }
+
+  identifierLigneSelectionnee(ligneSelectionnee){
+    this.doIdentifierLigneSelectionnee.emit({
+      item: this.item
+    });
+  }
+
 }

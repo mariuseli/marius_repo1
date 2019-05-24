@@ -23,7 +23,21 @@ export class AddPrestationComponent implements OnInit {
   }
 
   add(item: Prestation){
-    this.prestationService.add(item);
-    this.router.navigate(['../', {relativeTo: this.route}]);
+    this.prestationService
+      .add(item)
+      .then((res) => { //car le firebase retourne une promesse
+
+        this.router.navigate(['../', {relativeTo: this.route}]);
+      })
   }
+
+  // //Par Api Http
+  // add(item: Prestation){
+  //   this.prestationService
+  //     .add(item)
+  //     .subscribe((res) => { //car l'api http retourne un Observable
+
+  //       this.router.navigate(['../', {relativeTo: this.route}]);
+  //     })
+  // }
 }

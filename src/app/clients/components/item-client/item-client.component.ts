@@ -11,6 +11,8 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 export class ItemClientComponent implements OnInit {
 
   states = StateClient;
+  faEdit = faEdit;
+  faTrashAlt = faTrashAlt;
 
   @Input() item: Client;
   @Output() doChange: EventEmitter<any> = new EventEmitter();

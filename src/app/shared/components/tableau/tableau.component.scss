@@ -20,6 +20,10 @@
 
   tbody > * {
     display: contents;
+    &:hover {
+      cursor: pointer;
+      tr{background-color:lighten($color: $light-color, $amount: 20)}
+    }
   }
 
   .list-group-item:hover {

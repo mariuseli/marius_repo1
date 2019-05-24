@@ -1,0 +1,10 @@
+<ng-container *ngIf="(presta$ | async) as presta" (doIdentifierLigneSelectionnee)="identifierPrestation($event)">
+  <p>
+    {{presta.typePresta}}
+  </p>
+  <p>
+      {{presta.client}}
+  </p>
+</ng-container>
+
+

@@ -17,10 +17,14 @@ export class StateDirective implements OnChanges {
      this.nomClass = this.formatClass(this.appState);
    }
 
-   private formatClass(state: State): string {
-    return `state-${state.normalize('NFD').replace(/[\u0300-\u036f\s]/g, '').toLowerCase()}`;
-}
+  private formatClass(state?: any): string {
+    //console.log(state);
+    //return state ;
+    if(state){
+      return `state-${state.normalize('NFD').replace(/[\u0300-\u036f\s]/g, '').toLowerCase()}`;
+    }
 
-
+    return '';
+  }
 
 }
