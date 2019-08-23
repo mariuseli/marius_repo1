@@ -30,7 +30,7 @@ export class ListPrestationsComponent implements OnInit, OnDestroy {
   change(param: {item: Prestation, state: State}) {
     this.prestationService
       .update(param.item, param.state)
-      .then((res) =>{
+      .then((res) => {
         //res est la réponse de l'API firebase
         //Traiter réponse à envoyer aux user
       });
